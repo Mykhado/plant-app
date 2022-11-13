@@ -1,0 +1,12 @@
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.onRating {
+  color: rgb(255, 217, 30);
+}
+.offRating {
+  color: #ccc;
+}

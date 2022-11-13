@@ -1,0 +1,15 @@
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: rgb(245, 51, 51);
+}
+.off {
+  color: #ccc;
+}
+#like {
+  font-size: 30px;
+}

@@ -1,0 +1,10 @@
+.test {
+  font-weight: bold;
+}
+.red {
+  color: rgb(240, 197, 24);
+  background-color: black;
+  padding: 5px;
+  border-radius: 10px;
+  border: solid 1mm rgb(240, 197, 24);
+}
