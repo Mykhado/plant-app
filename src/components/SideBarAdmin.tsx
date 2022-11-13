@@ -148,7 +148,9 @@ const SideBarAdmin = ({ onClickSearch, transfertPlant }: AdminProps) => {
         </form>
       </div>
       <div className="p-3 border-bottom">
-        <p className="mb-1 fs-5 fw-semibold">Ajouter une nouvelle plante</p>
+        <p className="mb-1 fs-5 fw-semibold">
+          Ajouter/Modifier une nouvelle plante
+        </p>
         <br />
         <label htmlFor="name">Nom de la plante</label>
         <br />
