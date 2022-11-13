@@ -136,14 +136,14 @@ const SideBarAdmin = ({ onClickSearch, transfertPlant }: AdminProps) => {
             className=" mt-2 form-control fw-bold btn btn-success btn-sm"
             type="reset"
             onClick={handleClickButton}
-            value="search"
+            value="Search"
           />
           <br />
           <input
             className=" mt-2 form-control fw-bold btn btn-danger btn-sm"
             type="reset"
             onClick={handleClickDeleteBtn}
-            value="delete"
+            value="Delete"
           />
         </form>
       </div>
@@ -227,32 +227,29 @@ const SideBarAdmin = ({ onClickSearch, transfertPlant }: AdminProps) => {
           value="Ajouter"
           onClick={handleClickCreateBtn}
         />{" "}
-        <div className=" mt-2 border-bottom border-top">
-          <p className="p-3  ps-0 mb-1 fs-5 fw-semibold">Modifier une plante</p>
-          <p className="red fw-semibold">
-            ⚠️ Selectionner un Id pour une modification ⚠️
-          </p>
-          <div className="input-group">
-            <input
-              className="form-control fw-semibold btn btn-warning btn-sm"
-              type="reset"
-              value="Modifier"
-              onClick={handleClickUpdateBtn}
-            />
-            <select
-              name="chooseId"
-              id="IdSelect"
-              className="form-control"
-              onChange={handleChangeUpdateId}
-            >
-              <option value="">--Choisir un ID--</option>
-              {transfertPlant.map((plant) => (
-                <option key={uuid()} placeholder="ID" value={plant.id}>
-                  ID:{plant.id}
-                </option>
-              ))}
-            </select>
-          </div>
+        <p className="mt-2 red fw-semibold">
+          ⚠️ Selectionner un Id pour une modification ⚠️
+        </p>
+        <div className="input-group">
+          <input
+            className="form-control fw-semibold btn btn-warning btn-sm"
+            type="reset"
+            value="Modifier"
+            onClick={handleClickUpdateBtn}
+          />
+          <select
+            name="chooseId"
+            id="IdSelect"
+            className="form-control"
+            onChange={handleChangeUpdateId}
+          >
+            <option value="">--Choisir un ID--</option>
+            {transfertPlant.map((plant) => (
+              <option key={uuid()} placeholder="ID" value={plant.id}>
+                ID:{plant.id}
+              </option>
+            ))}
+          </select>
         </div>
       </div>
     </div>
