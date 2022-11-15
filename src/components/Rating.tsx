@@ -7,7 +7,7 @@ interface transfertProps {
 }
 const Rating = ({ transfertRating }: transfertProps) => {
   const [rating, setRating] = useState<number>(transfertRating);
-  const [hover, setHover] = useState(0);
+  const [hover, setHover] = useState<number>(0);
   return (
     <div className="star-rating">
       {[...Array(5)].map((star, index) => {

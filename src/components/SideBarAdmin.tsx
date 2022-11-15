@@ -34,6 +34,8 @@ const SideBarAdmin = ({ onClickSearch, transfertPlant }: AdminProps) => {
   console.log(options);
 
   const [plantList, setPlantList] = useState<Plant[]>([]);
+  const [imgPlant, setImgPlant] = useState<string>("bloquer.png");
+
   const [plant, setPlant] = useState<Plant>();
   // const [selectionPicture, setSelectionPicture] = useState<string>();
   const handleInputChange = (e: React.SyntheticEvent<HTMLInputElement>) => {
@@ -53,6 +55,7 @@ const SideBarAdmin = ({ onClickSearch, transfertPlant }: AdminProps) => {
   };
   const handleChangePicture = (e: React.SyntheticEvent<HTMLSelectElement>) => {
     newPicture = e.currentTarget.value;
+    setImgPlant(newPicture);
     // setSelectionPicture(newPicture);
     console.log("picture: " + e.currentTarget.value);
   };
@@ -210,7 +213,7 @@ const SideBarAdmin = ({ onClickSearch, transfertPlant }: AdminProps) => {
         <br />
         <select
           style={{ width: "200px" }}
-          className="form-control"
+          className=" form-control"
           name="choosePicture"
           id="urlPicture"
           onChange={handleChangePicture}
@@ -223,6 +226,19 @@ const SideBarAdmin = ({ onClickSearch, transfertPlant }: AdminProps) => {
           ))}
         </select>
         <br />
+        {/* <div
+          style={{ height: "200px", width: "200px" }}
+          className="form-control mb-2"
+        > */}
+        <label htmlFor="imgPlant"> Plante selectionnée</label>
+        <img
+          id="imgPlant"
+          style={{ height: "200px", width: "200px" }}
+          className=" form-control mb-2"
+          src={`http://localhost:8080/assets/${imgPlant}`}
+          alt="plant"
+        />
+        {/* </div> */}
         <input
           className="form-control fw-semibold btn btn-success btn-sm"
           type="reset"
